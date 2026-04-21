@@ -641,31 +641,9 @@ const registrySource: RegistrySourceSkill[] = [
   },
 ];
 
-const repoSkillCounts = registrySource.reduce((counts, entry) => {
-  const repoKey = `${entry.user}/${entry.repo}`;
-  counts.set(repoKey, (counts.get(repoKey) ?? 0) + 1);
-  return counts;
-}, new Map<string, number>());
-
-const isGenericRepo = (repo: string) => repo === "skill" || repo === "skills";
-
-const toSourceLabel = (user: string, repo: string) =>
-  isGenericRepo(repo) ? user : `${user}/${repo}`;
-
 const buildInitialPathSlug = (entry: RegistrySourceSkill) => {
-  const repoKey = `${entry.user}/${entry.repo}`;
   const userSegment = entry.user.toLowerCase();
-  const repoSegment = entry.repo.toLowerCase();
-
-  if ((repoSkillCounts.get(repoKey) ?? 0) <= 1) {
-    return entry.slug;
-  }
-
-  if (isGenericRepo(entry.repo)) {
-    return `${userSegment}/${entry.slug}`;
-  }
-
-  return `${userSegment}/${repoSegment}/${entry.slug}`;
+  return `${userSegment}/${entry.slug}`;
 };
 
 export const registry: RegistrySkill[] = [];
@@ -674,7 +652,7 @@ const usedPathSlugs = new Set<string>();
 for (const entry of registrySource) {
   const userSegment = entry.user.toLowerCase();
   const repoSegment = entry.repo.toLowerCase();
-  const sourceKey = `${userSegment}/${repoSegment}`;
+  const sourceKey = userSegment;
 
   let pathSlug = buildInitialPathSlug(entry);
   if (usedPathSlugs.has(pathSlug)) {
@@ -687,6 +665,6 @@ for (const entry of registrySource) {
     ...entry,
     pathSlug,
     sourceKey,
-    sourceLabel: toSourceLabel(entry.user, entry.repo),
+    sourceLabel: entry.user,
   });
 }

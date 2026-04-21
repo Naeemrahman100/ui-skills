@@ -43,9 +43,9 @@ const localSkills: Skill[] = Object.entries(skillModules).map(
 
     return {
       slug,
-      pathSlug: slug,
-      sourceKey: "local",
-      sourceLabel: "Local",
+      pathSlug: `ibelick/${slug}`,
+      sourceKey: "ibelick",
+      sourceLabel: "Ibelick",
       name,
       label: module.frontmatter.label ?? titleize(name),
       description: module.frontmatter.description,

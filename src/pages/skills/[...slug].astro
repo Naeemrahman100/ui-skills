@@ -77,6 +77,7 @@ const isGroupPage = !skill && children.length > 0;
 const segments = pathSlug.split("/");
 const breadcrumbItems = [
   { label: "Home", href: "/" },
+  { label: "Skills", href: "/skills" },
   ...segments.map((segment: string, index: number) => {
     const currentPath = segments.slice(0, index + 1).join("/");
     const matchedSkill = skillList.find((entry: Skill) => entry.pathSlug === currentPath);
@@ -140,7 +141,7 @@ const commandSegments = [
   { text: "npx", className: "text-[#953800]" },
   { text: " ui-skills", className: "text-[#0a3069]" },
   { text: " add", className: "text-[#0550ae]" },
-  { text: ` ${pathSlug}`, className: "text-parchment-400" },
+  { text: ` ${skill?.slug ?? pathSlug}`, className: "text-parchment-400" },
 ];
 ---
 

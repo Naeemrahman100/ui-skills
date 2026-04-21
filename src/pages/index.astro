@@ -6,18 +6,18 @@ import { InstallTabs } from "../ui/install-tabs";
 import ExpandableCodeBlock from "../ui/expandable-code-block.astro";
 
 const repoSkillSlugs = [
-  "baseline-ui",
-  "fixing-accessibility",
-  "fixing-metadata",
-  "fixing-motion-performance",
+  "ibelick/baseline-ui",
+  "ibelick/fixing-accessibility",
+  "ibelick/fixing-metadata",
+  "ibelick/fixing-motion-performance",
 ];
 const curatedSkillSlugs = [
-  "rams",
-  "bencium-innovative-ux-designer",
-  "accesslint/claude-marketplace/contrast-checker",
-  "accesslint/claude-marketplace/link-purpose",
-  "accesslint/claude-marketplace/refactor",
-  "accesslint/claude-marketplace/use-of-color",
+  "rams/rams",
+  "bencium/bencium-innovative-ux-designer",
+  "accesslint/contrast-checker",
+  "accesslint/link-purpose",
+  "accesslint/refactor",
+  "accesslint/use-of-color",
 ];
 
 const repoSkills = skills.filter((skill) => repoSkillSlugs.includes(skill.pathSlug));
@@ -63,7 +63,7 @@ const curatedSkills = skills.filter((skill) => curatedSkillSlugs.includes(skill.
               { text: " ui-skills", className: "text-[#0a3069]" },
               { text: " add", className: "text-[#0550ae]" },
               {
-                text: ` ${skill.pathSlug}`,
+                text: ` ${skill.slug}`,
                 className: "text-parchment-400",
               },
             ])}
