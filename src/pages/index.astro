@@ -17,8 +17,12 @@ const curatedSkillSlugs = [
   "accesslint/use-of-color",
 ];
 
-const repoSkills = skills.filter((skill) => repoSkillSlugs.includes(skill.pathSlug));
-const curatedSkills = skills.filter((skill) => curatedSkillSlugs.includes(skill.pathSlug));
+const repoSkills = skills.filter((skill) =>
+  repoSkillSlugs.includes(skill.pathSlug),
+);
+const curatedSkills = skills.filter((skill) =>
+  curatedSkillSlugs.includes(skill.pathSlug),
+);
 ---
 
 <Layout>
@@ -38,7 +42,7 @@ const curatedSkills = skills.filter((skill) => curatedSkillSlugs.includes(skill.
 
         <div>
           <h2
-            class="text-parchment-900 mb-3 px-4 text-lg font-medium tracking-tight sm:px-0"
+            class="text-parchment-900 px-4 text-lg font-medium tracking-tight sm:px-0"
           >
             Original
           </h2>
