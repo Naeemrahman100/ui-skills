@@ -30,6 +30,114 @@ const registrySource: RegistrySourceSkill[] = [
       "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code and UI design that avoids generic AI aesthetics.",
   },
   {
+    slug: "remotion-best-practices",
+    user: "remotion-dev",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/remotion-dev/skills/main/skills/remotion/SKILL.md",
+    githubUrl:
+      "https://github.com/remotion-dev/skills/blob/main/skills/remotion/SKILL.md",
+    name: "remotion-best-practices",
+    description:
+      "Domain-specific knowledge base for building videos with Remotion and React.",
+  },
+  {
+    slug: "create-adaptable-composable",
+    user: "vuejs-ai",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vuejs-ai/skills/main/skills/create-adaptable-composable/SKILL.md",
+    githubUrl:
+      "https://github.com/vuejs-ai/skills/blob/main/skills/create-adaptable-composable/SKILL.md",
+    name: "create-adaptable-composable",
+    description:
+      "Create library-grade Vue composables that support plain values, refs, and getters with predictable reactivity.",
+  },
+  {
+    slug: "vue-best-practices",
+    user: "vuejs-ai",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vuejs-ai/skills/main/skills/vue-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/vuejs-ai/skills/blob/main/skills/vue-best-practices/SKILL.md",
+    name: "vue-best-practices",
+    description:
+      "Core Vue development best practices for component architecture, reactivity, and maintainable code.",
+  },
+  {
+    slug: "vue-debug-guides",
+    user: "vuejs-ai",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vuejs-ai/skills/main/skills/vue-debug-guides/SKILL.md",
+    githubUrl:
+      "https://github.com/vuejs-ai/skills/blob/main/skills/vue-debug-guides/SKILL.md",
+    name: "vue-debug-guides",
+    description:
+      "Practical debugging workflows for diagnosing and fixing Vue reactivity, rendering, and state issues.",
+  },
+  {
+    slug: "vue-jsx-best-practices",
+    user: "vuejs-ai",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vuejs-ai/skills/main/skills/vue-jsx-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/vuejs-ai/skills/blob/main/skills/vue-jsx-best-practices/SKILL.md",
+    name: "vue-jsx-best-practices",
+    description:
+      "Guidance for writing robust, type-safe, and readable Vue components using JSX.",
+  },
+  {
+    slug: "vue-options-api-best-practices",
+    user: "vuejs-ai",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vuejs-ai/skills/main/skills/vue-options-api-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/vuejs-ai/skills/blob/main/skills/vue-options-api-best-practices/SKILL.md",
+    name: "vue-options-api-best-practices",
+    description:
+      "Best practices for structuring and scaling Vue applications built with the Options API.",
+  },
+  {
+    slug: "vue-pinia-best-practices",
+    user: "vuejs-ai",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vuejs-ai/skills/main/skills/vue-pinia-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/vuejs-ai/skills/blob/main/skills/vue-pinia-best-practices/SKILL.md",
+    name: "vue-pinia-best-practices",
+    description:
+      "Patterns for clean, scalable state management in Vue apps using Pinia stores.",
+  },
+  {
+    slug: "vue-router-best-practices",
+    user: "vuejs-ai",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vuejs-ai/skills/main/skills/vue-router-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/vuejs-ai/skills/blob/main/skills/vue-router-best-practices/SKILL.md",
+    name: "vue-router-best-practices",
+    description:
+      "Routing architecture and navigation patterns for maintainable Vue Router applications.",
+  },
+  {
+    slug: "vue-testing-best-practices",
+    user: "vuejs-ai",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vuejs-ai/skills/main/skills/vue-testing-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/vuejs-ai/skills/blob/main/skills/vue-testing-best-practices/SKILL.md",
+    name: "vue-testing-best-practices",
+    description:
+      "Testing strategies for Vue applications, including component tests, integration tests, and reliability patterns.",
+  },
+  {
     slug: "web-design-guidelines",
     user: "vercel-labs",
     repo: "agent-skills",
@@ -40,6 +148,186 @@ const registrySource: RegistrySourceSkill[] = [
     name: "web-design-guidelines",
     description:
       "Review UI code for Web Interface Guidelines compliance. Audit design, accessibility, and UX against Vercel's best practices.",
+  },
+  {
+    slug: "next-best-practices",
+    user: "vercel-labs",
+    repo: "next-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vercel-labs/next-skills/main/skills/next-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/vercel-labs/next-skills/blob/main/skills/next-best-practices/SKILL.md",
+    name: "next-best-practices",
+    description:
+      "Next.js best practices: file conventions, RSC boundaries, data patterns, async APIs, metadata, error handling, and optimization.",
+  },
+  {
+    slug: "next-cache-components",
+    user: "vercel-labs",
+    repo: "next-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vercel-labs/next-skills/main/skills/next-cache-components/SKILL.md",
+    githubUrl:
+      "https://github.com/vercel-labs/next-skills/blob/main/skills/next-cache-components/SKILL.md",
+    name: "next-cache-components",
+    description:
+      "Next.js 16 Cache Components guidance covering PPR, use cache directive, cacheLife, cacheTag, and updateTag.",
+  },
+  {
+    slug: "next-upgrade",
+    user: "vercel-labs",
+    repo: "next-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/vercel-labs/next-skills/main/skills/next-upgrade/SKILL.md",
+    githubUrl:
+      "https://github.com/vercel-labs/next-skills/blob/main/skills/next-upgrade/SKILL.md",
+    name: "next-upgrade",
+    description:
+      "Upgrade Next.js to the latest version using official migration guides and codemods.",
+  },
+  {
+    slug: "agent-browser",
+    user: "vercel-labs",
+    repo: "agent-browser",
+    rawUrl:
+      "https://raw.githubusercontent.com/vercel-labs/agent-browser/main/skills/agent-browser/SKILL.md",
+    githubUrl:
+      "https://github.com/vercel-labs/agent-browser/blob/main/skills/agent-browser/SKILL.md",
+    name: "agent-browser",
+    description:
+      "Browser automation CLI for AI agents for navigation, form actions, extraction, screenshots, QA, and app testing.",
+  },
+  {
+    slug: "react-native-best-practices",
+    user: "callstackincubator",
+    repo: "agent-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/callstackincubator/agent-skills/main/skills/react-native-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/callstackincubator/agent-skills/blob/main/skills/react-native-best-practices/SKILL.md",
+    name: "react-native-best-practices",
+    description:
+      "React Native performance optimization guidelines for FPS, TTI, bundle size, memory leaks, re-renders, and animations.",
+  },
+  {
+    slug: "threejs-animation",
+    user: "cloudai-x",
+    repo: "threejs-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/CloudAI-X/threejs-skills/main/skills/threejs-animation/SKILL.md",
+    githubUrl:
+      "https://github.com/CloudAI-X/threejs-skills/blob/main/skills/threejs-animation/SKILL.md",
+    name: "threejs-animation",
+    description:
+      "Three.js animation guidance for keyframes, skeletal animation, morph targets, and animation blending.",
+  },
+  {
+    slug: "threejs-fundamentals",
+    user: "cloudai-x",
+    repo: "threejs-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/CloudAI-X/threejs-skills/main/skills/threejs-fundamentals/SKILL.md",
+    githubUrl:
+      "https://github.com/CloudAI-X/threejs-skills/blob/main/skills/threejs-fundamentals/SKILL.md",
+    name: "threejs-fundamentals",
+    description:
+      "Three.js scene setup guidance for cameras, renderer configuration, object hierarchy, and transforms.",
+  },
+  {
+    slug: "threejs-geometry",
+    user: "cloudai-x",
+    repo: "threejs-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/CloudAI-X/threejs-skills/main/skills/threejs-geometry/SKILL.md",
+    githubUrl:
+      "https://github.com/CloudAI-X/threejs-skills/blob/main/skills/threejs-geometry/SKILL.md",
+    name: "threejs-geometry",
+    description:
+      "Three.js geometry patterns for built-in shapes, BufferGeometry, custom meshes, and instancing.",
+  },
+  {
+    slug: "threejs-interaction",
+    user: "cloudai-x",
+    repo: "threejs-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/CloudAI-X/threejs-skills/main/skills/threejs-interaction/SKILL.md",
+    githubUrl:
+      "https://github.com/CloudAI-X/threejs-skills/blob/main/skills/threejs-interaction/SKILL.md",
+    name: "threejs-interaction",
+    description:
+      "Three.js interaction patterns for raycasting, controls, pointer input, and object selection.",
+  },
+  {
+    slug: "threejs-lighting",
+    user: "cloudai-x",
+    repo: "threejs-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/CloudAI-X/threejs-skills/main/skills/threejs-lighting/SKILL.md",
+    githubUrl:
+      "https://github.com/CloudAI-X/threejs-skills/blob/main/skills/threejs-lighting/SKILL.md",
+    name: "threejs-lighting",
+    description:
+      "Three.js lighting guidance for light types, shadows, environment lighting, and performance tuning.",
+  },
+  {
+    slug: "threejs-loaders",
+    user: "cloudai-x",
+    repo: "threejs-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/CloudAI-X/threejs-skills/main/skills/threejs-loaders/SKILL.md",
+    githubUrl:
+      "https://github.com/CloudAI-X/threejs-skills/blob/main/skills/threejs-loaders/SKILL.md",
+    name: "threejs-loaders",
+    description:
+      "Three.js asset loading patterns for GLTF, textures, HDR assets, async loading, and progress handling.",
+  },
+  {
+    slug: "threejs-materials",
+    user: "cloudai-x",
+    repo: "threejs-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/CloudAI-X/threejs-skills/main/skills/threejs-materials/SKILL.md",
+    githubUrl:
+      "https://github.com/CloudAI-X/threejs-skills/blob/main/skills/threejs-materials/SKILL.md",
+    name: "threejs-materials",
+    description:
+      "Three.js material guidance for PBR, classic materials, shader materials, and material optimization.",
+  },
+  {
+    slug: "threejs-postprocessing",
+    user: "cloudai-x",
+    repo: "threejs-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/CloudAI-X/threejs-skills/main/skills/threejs-postprocessing/SKILL.md",
+    githubUrl:
+      "https://github.com/CloudAI-X/threejs-skills/blob/main/skills/threejs-postprocessing/SKILL.md",
+    name: "threejs-postprocessing",
+    description:
+      "Three.js post-processing techniques with EffectComposer, bloom, depth of field, and screen-space effects.",
+  },
+  {
+    slug: "threejs-shaders",
+    user: "cloudai-x",
+    repo: "threejs-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/CloudAI-X/threejs-skills/main/skills/threejs-shaders/SKILL.md",
+    githubUrl:
+      "https://github.com/CloudAI-X/threejs-skills/blob/main/skills/threejs-shaders/SKILL.md",
+    name: "threejs-shaders",
+    description:
+      "Three.js shader guidance for GLSL, ShaderMaterial, uniforms, and custom vertex and fragment effects.",
+  },
+  {
+    slug: "threejs-textures",
+    user: "cloudai-x",
+    repo: "threejs-skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/CloudAI-X/threejs-skills/main/skills/threejs-textures/SKILL.md",
+    githubUrl:
+      "https://github.com/CloudAI-X/threejs-skills/blob/main/skills/threejs-textures/SKILL.md",
+    name: "threejs-textures",
+    description:
+      "Three.js texture workflows for maps, UV mapping, environment maps, and texture configuration.",
   },
   {
     slug: "ui-ux-pro-max",
@@ -112,6 +400,210 @@ const registrySource: RegistrySourceSkill[] = [
     name: "canvas-design",
     description:
       "Create original visual designs and art on digital canvases using design philosophy, focusing on form, space, and color.",
+  },
+  {
+    slug: "antfu",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/antfu/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/antfu/SKILL.md",
+    name: "antfu",
+    description:
+      "Anthony Fu's opinionated tooling and conventions for JavaScript/TypeScript projects.",
+  },
+  {
+    slug: "nuxt",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/nuxt/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/nuxt/SKILL.md",
+    name: "nuxt",
+    description:
+      "Nuxt full-stack Vue framework guidance for SSR, auto-imports, file-based routing, and server routes.",
+  },
+  {
+    slug: "pinia",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/pinia/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/pinia/SKILL.md",
+    name: "pinia",
+    description:
+      "Pinia state management best practices for type-safe Vue stores, getters, and actions.",
+  },
+  {
+    slug: "pnpm",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/pnpm/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/pnpm/SKILL.md",
+    name: "pnpm",
+    description:
+      "pnpm package manager guidance for strict dependency resolution, workspaces, catalogs, patches, and overrides.",
+  },
+  {
+    slug: "slidev",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/slidev/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/slidev/SKILL.md",
+    name: "slidev",
+    description:
+      "Create developer slide decks with Slidev using Markdown, Vue components, code highlighting, and animations.",
+  },
+  {
+    slug: "tsdown",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/tsdown/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/tsdown/SKILL.md",
+    name: "tsdown",
+    description:
+      "Bundle TypeScript and JavaScript libraries with tsdown, including declarations and multi-format builds.",
+  },
+  {
+    slug: "turborepo",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/turborepo/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/turborepo/SKILL.md",
+    name: "turborepo",
+    description:
+      "Turborepo monorepo build system guidance for pipelines, caching, filtering, CI, and package boundaries.",
+  },
+  {
+    slug: "unocss",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/unocss/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/unocss/SKILL.md",
+    name: "unocss",
+    description:
+      "UnoCSS atomic CSS engine guidance for rules, shortcuts, and presets like Wind, Icons, and Attributify.",
+  },
+  {
+    slug: "vite",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/vite/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/vite/SKILL.md",
+    name: "vite",
+    description:
+      "Vite configuration and plugin guidance, including SSR and Vite 8 Rolldown migration patterns.",
+  },
+  {
+    slug: "vitepress",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/vitepress/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/vitepress/SKILL.md",
+    name: "vitepress",
+    description:
+      "VitePress documentation site guidance for configuration, theming, and Markdown plus Vue content.",
+  },
+  {
+    slug: "vitest",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/vitest/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/vitest/SKILL.md",
+    name: "vitest",
+    description:
+      "Vitest testing best practices for unit tests, mocking, coverage, fixtures, and test filtering.",
+  },
+  {
+    slug: "vue",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/vue/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/vue/SKILL.md",
+    name: "vue",
+    description:
+      "Vue 3 Composition API and reactivity guidance for SFCs, script setup macros, and built-in components.",
+  },
+  {
+    slug: "vue-best-practices",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/vue-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/vue-best-practices/SKILL.md",
+    name: "vue-best-practices",
+    description:
+      "Vue.js best practices emphasizing Composition API with script setup and TypeScript.",
+  },
+  {
+    slug: "vue-router-best-practices",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/vue-router-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/vue-router-best-practices/SKILL.md",
+    name: "vue-router-best-practices",
+    description:
+      "Vue Router 4 patterns covering navigation guards, route params, and route lifecycle interactions.",
+  },
+  {
+    slug: "vue-testing-best-practices",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/vue-testing-best-practices/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/vue-testing-best-practices/SKILL.md",
+    name: "vue-testing-best-practices",
+    description:
+      "Vue testing guidance using Vitest, Vue Test Utils, component testing, mocking, and Playwright E2E.",
+  },
+  {
+    slug: "vueuse-functions",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/vueuse-functions/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/vueuse-functions/SKILL.md",
+    name: "vueuse-functions",
+    description:
+      "Apply VueUse composables to build concise, maintainable Vue and Nuxt features.",
+  },
+  {
+    slug: "web-design-guidelines",
+    user: "antfu",
+    repo: "skills",
+    rawUrl:
+      "https://raw.githubusercontent.com/antfu/skills/main/skills/web-design-guidelines/SKILL.md",
+    githubUrl:
+      "https://github.com/antfu/skills/blob/main/skills/web-design-guidelines/SKILL.md",
+    name: "web-design-guidelines",
+    description:
+      "Review UI code for web interface guideline compliance, including accessibility and UX best practices.",
   },
   {
     slug: "12-principles-of-animation",
