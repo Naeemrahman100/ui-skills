@@ -168,10 +168,31 @@ if (skill?.isRegistry) {
 }
 
 const commandSegments = [
-  { text: "npx", className: "text-[#953800]" },
-  { text: " ui-skills", className: "text-[#0a3069]" },
-  { text: " add", className: "text-[#0550ae]" },
-  { text: ` ${skill?.slug ?? pathSlug}`, className: "text-parchment-400" },
+  ...(skill?.isRegistry
+    ? (() => {
+        const registryEntry = registry.find((entry: RegistrySkill) => entry.pathSlug === pathSlug);
+        const repoUrl = registryEntry
+          ? `https://github.com/${registryEntry.user}/${registryEntry.repo}`
+          : "https://github.com/ibelick/ui-skills";
+        const skillName = registryEntry?.name ?? skill?.slug ?? pathSlug;
+
+        return [
+          { text: "npx", className: "text-[#953800]" },
+          { text: " skills", className: "text-[#0a3069]" },
+          { text: " add", className: "text-[#0550ae]" },
+          { text: ` ${repoUrl}`, className: "text-parchment-400" },
+          { text: " --skill", className: "text-[#0550ae]" },
+          { text: ` ${skillName}`, className: "text-parchment-400" },
+        ];
+      })()
+    : [
+        { text: "npx", className: "text-[#953800]" },
+        { text: " skills", className: "text-[#0a3069]" },
+        { text: " add", className: "text-[#0550ae]" },
+        { text: " https://github.com/ibelick/ui-skills", className: "text-parchment-400" },
+        { text: " --skill", className: "text-[#0550ae]" },
+        { text: ` ${skill?.slug ?? pathSlug}`, className: "text-parchment-400" },
+      ]),
 ];
 ---
 
@@ -281,7 +302,7 @@ const commandSegments = [
                 <h2 class="text-parchment-900 mb-3 px-4 text-lg font-medium tracking-tight sm:px-0">
                   Install
                 </h2>
-                <CodeBlock lines={[commandSegments]} align="center" />
+                <CodeBlock lines={[commandSegments]} align="center" truncate />
               </div>
 
               <SkillContentCard

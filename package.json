@@ -3,9 +3,6 @@
   "type": "module",
   "version": "0.1.5",
   "license": "MIT",
-  "bin": {
-    "ui-skills": "./bin/ui-skills.cjs"
-  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

@@ -52,7 +52,8 @@ export const GET: APIRoute = async ({ params }) => {
   try {
     const response = await fetch(registrySkill.rawUrl);
     if (!response.ok) {
-      throw new Error(`Failed to fetch registry skill: ${response.statusText}`);
+      const status = response.status === 404 ? 404 : 502;
+      return new Response("Skill source unavailable", { status });
     }
 
     const content = await response.text();
@@ -61,8 +62,7 @@ export const GET: APIRoute = async ({ params }) => {
         "Content-Type": "text/plain; charset=utf-8",
       },
     });
-  } catch (error) {
-    console.error(error);
+  } catch {
     return new Response("Error fetching registry skill", { status: 500 });
   }
 };
