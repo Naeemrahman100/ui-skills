@@ -1,6 +1,5 @@
 type GithubStarsCacheEntry = {
   value: string;
-  etag?: string;
   expiresAt: number;
   inFlight?: Promise<void>;
 };
@@ -29,7 +28,57 @@ const parseMaxAge = (cacheControl: string | null) => {
   return seconds * 1000;
 };
 
-const formatStars = (value: number) => new Intl.NumberFormat("en-US").format(value);
+const formatCompact = (value: number) =>
+  new Intl.NumberFormat("en-US", {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  })
+    .format(value)
+    .toLowerCase()
+    .replace(/\s+/g, "");
+
+const normalizeStarsLabel = (value: string) => {
+  const trimmed = value.trim().toLowerCase();
+
+  if (/^\d+(?:\.\d+)?[km]$/.test(trimmed)) {
+    return trimmed;
+  }
+
+  const numeric = Number(trimmed.replace(/,/g, ""));
+  if (Number.isFinite(numeric)) {
+    return formatCompact(numeric);
+  }
+
+  return value.trim();
+};
+
+const fetchStarsFromShields = async (
+  repo: string,
+): Promise<{ stars: string; ttl: number }> => {
+  const response = await fetch(
+    `https://img.shields.io/github/stars/${repo}.json`,
+    {
+      headers: {
+        Accept: "application/json",
+      },
+    },
+  );
+
+  if (!response.ok) {
+    throw new Error(`Shields API returned ${response.status}`);
+  }
+
+  const ttl = parseMaxAge(response.headers.get("cache-control")) ?? DEFAULT_TTL_MS;
+
+  const data = (await response.json()) as { value?: string };
+  const stars = data.value ? normalizeStarsLabel(data.value) : "";
+
+  if (!stars) {
+    throw new Error("Missing or invalid value in Shields response");
+  }
+
+  return { stars, ttl };
+};
 
 export const getGithubStars = async (
   repo: string,
@@ -39,44 +88,10 @@ export const getGithubStars = async (
   const entry = cacheStore.get(repo);
 
   const refresh = async () => {
-    const current = cacheStore.get(repo);
-
-    const headers: Record<string, string> = {
-      Accept: "application/vnd.github+json",
-    };
-
-    if (current?.etag) {
-      headers["If-None-Match"] = current.etag;
-    }
-
-    const response = await fetch(`https://api.github.com/repos/${repo}`, {
-      headers,
-    });
-
-    const ttl = parseMaxAge(response.headers.get("cache-control")) ?? DEFAULT_TTL_MS;
-
-    if (response.status === 304 && current) {
-      cacheStore.set(repo, {
-        ...current,
-        expiresAt: Date.now() + ttl,
-      });
-      return;
-    }
-
-    if (!response.ok) {
-      throw new Error(`GitHub API returned ${response.status}`);
-    }
-
-    const data = await response.json();
-    const stars = typeof data?.stargazers_count === "number" ? data.stargazers_count : null;
-
-    if (stars === null) {
-      throw new Error("Missing stargazers_count in GitHub response");
-    }
+    const { stars, ttl } = await fetchStarsFromShields(repo);
 
     cacheStore.set(repo, {
-      value: formatStars(stars),
-      etag: response.headers.get("etag") ?? undefined,
+      value: stars,
       expiresAt: Date.now() + ttl,
     });
   };
@@ -106,7 +121,6 @@ export const getGithubStars = async (
 
     cacheStore.set(repo, {
       value: current?.value ?? fallback,
-      etag: current?.etag,
       expiresAt: current?.expiresAt ?? 0,
       inFlight,
     });
