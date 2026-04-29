@@ -783,56 +783,69 @@ const registrySource: RegistrySourceSkill[] = [
       "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.",
   },
   {
+    slug: "audit-and-fix",
+    user: "AccessLint",
+    repo: "claude-marketplace",
+    rawUrl:
+      "https://raw.githubusercontent.com/AccessLint/claude-marketplace/main/plugins/accesslint/skills/audit-and-fix/SKILL.md",
+    githubUrl:
+      "https://github.com/AccessLint/claude-marketplace/blob/main/plugins/accesslint/skills/audit-and-fix/SKILL.md",
+    name: "audit-and-fix",
+    topics: ["accessibility", "testing", "frontend"],
+    description:
+      "Accessibility auditing and remediation workflow that combines detection, prioritization, and practical fixes for WCAG issues.",
+  },
+  {
     slug: "contrast-checker",
     user: "AccessLint",
     repo: "claude-marketplace",
     rawUrl:
-      "https://raw.githubusercontent.com/AccessLint/claude-marketplace/main/plugins/accesslint/skills/contrast-checker/SKILL.md",
+      "https://raw.githubusercontent.com/AccessLint/claude-marketplace/main/plugins/accesslint/skills/audit-and-fix/SKILL.md",
     githubUrl:
-      "https://github.com/AccessLint/claude-marketplace/blob/main/plugins/accesslint/skills/contrast-checker/SKILL.md",
+      "https://github.com/AccessLint/claude-marketplace/blob/main/plugins/accesslint/skills/audit-and-fix/SKILL.md",
     name: "contrast-checker",
     topics: ["accessibility", "testing", "color"],
     description:
-      "Color contrast analyzer for WCAG compliance. Calculates contrast ratios, identifies violations, and suggests accessible color alternatives.",
+      "Compatibility listing for contrast-checker installs from AccessLint's marketplace skill set.",
   },
   {
     slug: "link-purpose",
     user: "AccessLint",
     repo: "claude-marketplace",
     rawUrl:
-      "https://raw.githubusercontent.com/AccessLint/claude-marketplace/main/plugins/accesslint/skills/link-purpose/SKILL.md",
+      "https://raw.githubusercontent.com/AccessLint/claude-marketplace/main/plugins/accesslint/skills/audit-and-fix/SKILL.md",
     githubUrl:
-      "https://github.com/AccessLint/claude-marketplace/blob/main/plugins/accesslint/skills/link-purpose/SKILL.md",
+      "https://github.com/AccessLint/claude-marketplace/blob/main/plugins/accesslint/skills/audit-and-fix/SKILL.md",
     name: "link-purpose",
     topics: ["accessibility", "testing", "interaction"],
     description:
-      "Analyze and improve WCAG 2.4.4 link purpose compliance by fixing generic and ambiguous link text.",
+      "Compatibility listing for link-purpose installs from AccessLint's marketplace skill set.",
   },
   {
     slug: "refactor",
     user: "AccessLint",
     repo: "claude-marketplace",
     rawUrl:
-      "https://raw.githubusercontent.com/AccessLint/claude-marketplace/main/plugins/accesslint/skills/refactor/SKILL.md",
+      "https://raw.githubusercontent.com/AccessLint/claude-marketplace/main/plugins/accesslint/skills/audit-and-fix/SKILL.md",
     githubUrl:
-      "https://github.com/AccessLint/claude-marketplace/blob/main/plugins/accesslint/skills/refactor/SKILL.md",
+      "https://github.com/AccessLint/claude-marketplace/blob/main/plugins/accesslint/skills/audit-and-fix/SKILL.md",
     name: "refactor",
     topics: ["accessibility", "testing", "frontend"],
     description:
-      "Accessibility refactoring specialist for systematic WCAG fixes across components and codebases.",
+      "Compatibility listing for refactor installs from AccessLint's marketplace skill set.",
   },
   {
     slug: "use-of-color",
     user: "AccessLint",
     repo: "claude-marketplace",
     rawUrl:
-      "https://raw.githubusercontent.com/AccessLint/claude-marketplace/main/plugins/accesslint/skills/use-of-color/SKILL.md",
+      "https://raw.githubusercontent.com/AccessLint/claude-marketplace/main/plugins/accesslint/skills/audit-and-fix/SKILL.md",
     githubUrl:
-      "https://github.com/AccessLint/claude-marketplace/blob/main/plugins/accesslint/skills/use-of-color/SKILL.md",
+      "https://github.com/AccessLint/claude-marketplace/blob/main/plugins/accesslint/skills/audit-and-fix/SKILL.md",
     name: "use-of-color",
     topics: ["accessibility", "color", "testing"],
     description:
-      "Analyze and remediate WCAG 1.4.1 use-of-color issues where meaning relies only on color.",
+      "Compatibility listing for use-of-color installs from AccessLint's marketplace skill set.",
   },
   {
     slug: "emil-design-eng",
